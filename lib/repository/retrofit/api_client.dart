@@ -9,5 +9,5 @@ abstract class ApiClient {
   factory ApiClient(Dio dio, {String baseUrl}) = _ApiClient;
 
   @GET(Apis.users)
-  Future<ResponseData> getUsers();
+  Future<ResponseData> getRepos(@Path("username") String username);
 }
